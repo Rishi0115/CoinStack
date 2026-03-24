@@ -23,19 +23,13 @@ const Login = ({ closemodal }) => {
             setType('password')
         }
     }
-    useEffect(() => {
-        if (user) {
-            dispatch(fetchWatchlist(user.user.uid));
-        }
-        console.log("aa");
-    }, [dispatch, user]);
-
     const handlesubmit = async () => {
         try {
             const result = await signInWithEmailAndPassword(auth, email, password);
             console.log(result);
             dispatch(setactiveuser({
-                user: result.user
+                uid: result.user.uid,
+                email: result.user.email
             }))
             alert("Login Successful! Now you can use the wishlist feature.");
             closemodal();
@@ -49,7 +43,8 @@ const Login = ({ closemodal }) => {
             const result = await signInWithPopup(auth, provider);
             console.log(result);
             dispatch(setactiveuser({
-                user: result.user
+                uid: result.user.uid,
+                email: result.user.email
             }))
             alert('Google sign-in successful');
             closemodal();

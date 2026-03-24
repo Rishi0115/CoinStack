@@ -34,7 +34,8 @@ const Signup = ({ closemodal }) => {
             const result = await signInWithPopup(auth, provider);
             console.log(result);
             dispatch(setactiveuser({
-                user: result.user
+                uid: result.user.uid,
+                email: result.user.email
             }))
             alert('Google sign-in successful');
             closemodal();

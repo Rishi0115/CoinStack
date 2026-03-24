@@ -30,7 +30,7 @@ const CoinLeftBar = () => {
         fetchdata();
     }, [id]);
     const handleAddToWatchlist = async () => {
-        const coinRef = doc(db, "watchlist", user.user.uid);
+        const coinRef = doc(db, "watchlist", user.uid);
         try {
             await setDoc(
                 coinRef,
@@ -46,7 +46,7 @@ const CoinLeftBar = () => {
     console.log(watchlist);
     
     const handleRemoveFromWatchlist = async () => {
-        const coinRef = doc(db, "watchlist", user.user.uid);
+        const coinRef = doc(db, "watchlist", user.uid);
         try {
             await setDoc(
                 coinRef,

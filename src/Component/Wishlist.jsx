@@ -17,7 +17,7 @@ const Wishlist = () => {
     )
     const user = useSelector(selectuser);
     const handleRemoveFromWatchlist = async (coinid) => {
-        const coinRef = doc(db, "watchlist", user.user.uid);
+        const coinRef = doc(db, "watchlist", user.uid);
         try {
             await setDoc(
                 coinRef,
