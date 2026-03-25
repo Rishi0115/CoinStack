@@ -41,3 +41,5 @@ Architecture
 
 Conclusion:
 CoinStack demonstrates the implementation of a scalable full_stack application by combining real-time API integration, secure authentication, and interactive data visualization. It highlights best practices in modern web development and showcases the ability to build production-ready applications.
+<img width="1881" height="998" alt="Screenshot 2026-03-24 202939" src="https://github.com/user-attachments/assets/a42fd019-a5b1-4e8e-8155-ee785b998dc8" />
+
